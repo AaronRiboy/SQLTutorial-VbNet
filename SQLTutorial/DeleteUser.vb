@@ -41,8 +41,8 @@ Public Class DeleteUser
             For Each i As String In clbUsers.CheckedItems
                 sbDelete.Append(String.Format("'{0}'", i))
                 sbDelete.Append(",")
-                'SQL.AddParam("@users" & c, i)
                 'DelString += "DELETE FROM members WHERE username=@users" & c & ","
+                'SQL.AddParam("@users" & c, i)
                 'c += 1
             Next
             sbDelete.Append("'')")
