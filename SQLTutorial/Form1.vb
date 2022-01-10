@@ -10,4 +10,9 @@
         Dim newUser As New NewUser()
         newUser.Show()
     End Sub
+
+    Private Sub msiEditUser_Click(sender As Object, e As EventArgs) Handles msiEditUser.Click
+        Dim editUser As New EditUser()
+        editUser.Show()
+    End Sub
 End Class

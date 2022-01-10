@@ -36,3 +36,4 @@ C:\Users\User\source\repos\SQLTutorial\SQLTutorial\bin\Debug\netcoreapp3.1\DevEx
 C:\Users\User\source\repos\SQLTutorial\SQLTutorial\bin\Debug\netcoreapp3.1\DevExpress.XtraEditors.v21.2.xml
 C:\Users\User\source\repos\SQLTutorial\SQLTutorial\bin\Debug\netcoreapp3.1\DevExpress.XtraBars.v21.2.xml
 C:\Users\User\source\repos\SQLTutorial\SQLTutorial\bin\Debug\netcoreapp3.1\DevExpress.XtraTreeList.v21.2.xml
+C:\Users\User\source\repos\SQLTutorial\SQLTutorial\obj\Debug\netcoreapp3.1\SQLTutorial.EditUser.resources
