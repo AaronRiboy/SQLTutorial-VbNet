@@ -32,18 +32,11 @@ Public Class DeleteUser
         ElseIf result = DialogResult.Yes Then
             'generate a mass delete command
 
-            Dim c As Integer 'unique ID for auto generated numbers
-
-            Dim DelString As String = "" 'query string builder
-
             Dim sbDelete As New StringBuilder
             sbDelete.Append("(")
             For Each i As String In clbUsers.CheckedItems
                 sbDelete.Append(String.Format("'{0}'", i))
                 sbDelete.Append(",")
-                'DelString += "DELETE FROM members WHERE username=@users" & c & ","
-                'SQL.AddParam("@users" & c, i)
-                'c += 1
             Next
             sbDelete.Append("'')")
 
