@@ -24,13 +24,17 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.msMain = New System.Windows.Forms.MenuStrip()
         Me.miInventory = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ManageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.msiNewUser = New System.Windows.Forms.ToolStripMenuItem()
+        Me.msiDeleteUser = New System.Windows.Forms.ToolStripMenuItem()
+        Me.msiEditUser = New System.Windows.Forms.ToolStripMenuItem()
         Me.msMain.SuspendLayout()
         Me.SuspendLayout()
         '
         'msMain
         '
         Me.msMain.ImageScalingSize = New System.Drawing.Size(24, 24)
-        Me.msMain.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miInventory})
+        Me.msMain.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miInventory, Me.ManageToolStripMenuItem})
         Me.msMain.Location = New System.Drawing.Point(0, 0)
         Me.msMain.Name = "msMain"
         Me.msMain.Size = New System.Drawing.Size(981, 33)
@@ -42,6 +46,31 @@ Partial Class Form1
         Me.miInventory.Name = "miInventory"
         Me.miInventory.Size = New System.Drawing.Size(103, 29)
         Me.miInventory.Text = "Inventory"
+        '
+        'ManageToolStripMenuItem
+        '
+        Me.ManageToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.msiNewUser, Me.msiDeleteUser, Me.msiEditUser})
+        Me.ManageToolStripMenuItem.Name = "ManageToolStripMenuItem"
+        Me.ManageToolStripMenuItem.Size = New System.Drawing.Size(132, 29)
+        Me.ManageToolStripMenuItem.Text = "Manage User"
+        '
+        'msiNewUser
+        '
+        Me.msiNewUser.Name = "msiNewUser"
+        Me.msiNewUser.Size = New System.Drawing.Size(270, 34)
+        Me.msiNewUser.Text = "New User"
+        '
+        'msiDeleteUser
+        '
+        Me.msiDeleteUser.Name = "msiDeleteUser"
+        Me.msiDeleteUser.Size = New System.Drawing.Size(270, 34)
+        Me.msiDeleteUser.Text = "Delete User"
+        '
+        'msiEditUser
+        '
+        Me.msiEditUser.Name = "msiEditUser"
+        Me.msiEditUser.Size = New System.Drawing.Size(270, 34)
+        Me.msiEditUser.Text = "Edit User"
         '
         'Form1
         '
@@ -62,4 +91,8 @@ Partial Class Form1
 
     Friend WithEvents msMain As MenuStrip
     Friend WithEvents miInventory As ToolStripMenuItem
+    Friend WithEvents ManageToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents msiNewUser As ToolStripMenuItem
+    Friend WithEvents msiDeleteUser As ToolStripMenuItem
+    Friend WithEvents msiEditUser As ToolStripMenuItem
 End Class

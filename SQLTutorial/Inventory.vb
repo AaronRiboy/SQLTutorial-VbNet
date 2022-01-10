@@ -39,6 +39,7 @@
 
 
     Private Sub Inventory_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         MdiParent = Form1.ActiveForm
         LoadGrid()
         LoadCBX()

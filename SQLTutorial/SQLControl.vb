@@ -24,7 +24,7 @@ Public Class SQLControl
     End Sub
 
     'Excute  query sub
-    Public Sub ExecQuery(Query As String)
+    Public Sub ExecQuery(Query As String, Optional ReturnIdentity As Boolean = False)
         'Reset query stats
         RecordCount = 0
         Exception = ""
@@ -45,6 +45,19 @@ Public Class SQLControl
             DBDT = New DataTable
             DBDA = New SqlDataAdapter(DBCmd)
             RecordCount = DBDA.Fill(DBDT)
+
+            If ReturnIdentity = True Then
+                Dim ReturnQuery As String = "SELECT @@IDENTITY as LastID;"
+                '@@IDENTITY - SESSION
+                'SCOPE_IDENTITY() - SESSION & SCOPE
+                'IDEN_CURRENT(tablename) - LAST IDENT IN TABLE, ANY SCOPE, ANY SESSION
+                DBCmd = New SqlCommand(ReturnQuery, DBCon)
+                DBDT = New DataTable
+                DBDA = New SqlDataAdapter(DBCmd)
+                RecordCount = DBDA.Fill(DBDT)
+
+
+            End If
 
         Catch ex As Exception
             'Capture  error

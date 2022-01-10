@@ -20,4 +20,10 @@
     <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="DevExpress.XtraPrinting.v21.2">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\DevExpress 21.2\Components\Offline Packages\devexpress.win.design\21.2.4\lib\net5.0-windows\DevExpress.XtraPrinting.v21.2.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
