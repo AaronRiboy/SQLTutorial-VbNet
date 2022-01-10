@@ -15,4 +15,9 @@
         Dim editUser As New EditUser()
         editUser.Show()
     End Sub
+
+    Private Sub msiDeleteUser_Click(sender As Object, e As EventArgs) Handles msiDeleteUser.Click
+        Dim deleteUser As New DeleteUser()
+        deleteUser.Show()
+    End Sub
 End Class
